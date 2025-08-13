@@ -27,6 +27,7 @@ public class NumberGuess {
 			int guessedNumber=scan.nextInt();
 			if(guessedNumber<1 || guessedNumber>100){
 			    System.out.println("enter valid number");
+				continue;
 			}
 			if (Target==guessedNumber) {
 				System.out.println("you are correct✅");
@@ -65,71 +66,57 @@ public class NumberGuess {
 
 }
 -------------compiler output----
-Welcome to Number guessing game??????? ----//
+Welcome to Number guessing game🔢🚧🚧🚧🚧🚧🚧
 here you have to  guess the number what I selected in range of 1 to 100
 rule no 1: you have to select a number in 1 to 100 range 
 rule no 2: you have only 10 attempts only
 if you can't guess the number in given attempts you will lose 
 guess the number for attempt1
-45
-guessed too high? 
+56
+guessed too low ⬇
 guess the number for attempt2
-25
-guessed too low ?
+68
+guessed too high⬆ 
 guess the number for attempt3
-35
-guessed too high? 
+568
+enter valid number
+guess the number for attempt3
+60
+guessed too high⬆ 
 guess the number for attempt4
-20
-guessed too low ?
+59
+guessed too high⬆ 
 guess the number for attempt5
-24
-guessed too low ?
-guess the number for attempt6
-23
-guessed too low ?
-guess the number for attempt7
-22
-guessed too low ?
-guess the number for attempt8
-21
-guessed too low ?
-guess the number for attempt9
-20
-guessed too low ?
-guess the number for attempt10
-18
-guessed too low ?
-you failed ?to guess here is my number32
+57
+you are correct✅
+you guessed in 5 attempts
 wanna play again !!!! if yes, type yes
 yes
-Welcome to Number guessing game???????
+Welcome to Number guessing game🔢🚧🚧🚧🚧🚧🚧
 here you have to  guess the number what I selected in range of 1 to 100
 rule no 1: you have to select a number in 1 to 100 range 
 rule no 2: you have only 10 attempts only
 if you can't guess the number in given attempts you will lose 
 guess the number for attempt1
-25
-guessed too high? 
+58
+guessed too high⬆ 
 guess the number for attempt2
-15
-guessed too high? 
+45
+guessed too low ⬇
 guess the number for attempt3
-10
-guessed too high? 
+50
+guessed too low ⬇
 guess the number for attempt4
-5
-guessed too low ?
+55
+guessed too high⬆ 
 guess the number for attempt5
-8
-guessed too low ?
-guess the number for attempt6
-9
-you are correct?
-you guessed in 6 attempts
+53
+you are correct✅
+you guessed in 5 attempts
 wanna play again !!!! if yes, type yes
 no
-thanks for playing???
+thanks for playing😀😃😍
+
 =================================================
 	    
 		
