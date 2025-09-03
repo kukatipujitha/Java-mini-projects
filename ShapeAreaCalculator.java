@@ -1,6 +1,55 @@
 // Online Java Compiler
 // Use this editor to write, compile and run your Java code online
 import java.util.Scanner;
+class ShapeAreaCalculator{
+    public static void printArea(Shape name){
+        System.out.printf("Area of the %s is: %.2f%n",name.toString(),name.area());
+    }
+    public static void main(String[] args){
+        Scanner scan=new Scanner(System.in);
+        boolean useagain=true;
+        while(useagain){
+        System.out.println("what shape do you want to find area");
+        String response=scan.next().toLowerCase();
+        if(response.equals("circle")){
+        System.out.println("enter the radius");
+        double r=scan.nextDouble();
+            Shape C=new Circle(r);
+            printArea(C);
+        }
+        else if(response.equals("rectangle")){
+        System.out.println("enter the length");
+        double l=scan.nextDouble();
+        System.out.println("enter the breadth");
+        double b=scan.nextDouble();
+             Shape R=new Rectangle(l,b);
+             printArea(R);
+        }
+        else if(response.equals("triangle")){
+            
+        System.out.println("enter the base");
+        double base=scan.nextDouble();
+        System.out.println("enter the height");
+        double h=scan.nextDouble();
+            Shape T=new Triangle(base,h);
+            printArea(T);  
+        }
+        else{
+            System.out.println("enter valid shape");
+        }
+        System.out.println("wanna find again if yes ----type 'yes'");
+        String opinion =scan.next().toLowerCase();
+        if(opinion.equals("yes")){
+            useagain=true;
+        }
+        else{
+            useagain=false;
+            System.out.println("thanks for using");
+        }
+}
+}
+}
+
 abstract  class Shape{
     abstract double  area();
 }
@@ -13,6 +62,10 @@ class Circle extends Shape{
     public double area(){
         return Math.PI*radius*radius;
     }
+    @Override
+    public String toString() {
+        return "Circle";
+    }
 }
 class Rectangle extends Shape{
     private double length;
@@ -24,6 +77,10 @@ class Rectangle extends Shape{
     @Override
     public double area(){
         return length*width;
+    }
+    @Override
+    public String toString() {
+        return "Rectangle";
     }
     
 }
@@ -38,47 +95,29 @@ class Triangle extends Shape{
     public double area(){
         return 0.5*base*height;
     }
-    
-}
-lass ShapeAreaCalculator{
-    public static void printArea(Shape news){
-        System.out.printf("area of the shape is: %.2f%n",news.area());
+    @Override
+    public String toString() {
+        return "Triangle";
     }
-    public static void main(String[] args){
-        Scanner scan=new Scanner(System.in);
-        System.out.println("enter the radius");
-        double r=scan.nextDouble();
-        System.out.println("enter the length");
-        double l=scan.nextDouble();
-        System.out.println("enter the breadth");
-        double b=scan.nextDouble();
-        System.out.println("enter the base");
-        double base=scan.nextDouble();
-        System.out.println("enter the height");
-        double h=scan.nextDouble();
-        Shape C=new Circle(r);
-        Shape R=new Rectangle(l,b);
-        Shape T=new Triangle(base,h);
-        printArea(C);
-        printArea(R);
-        printArea(T);       
-}
-}
-
-----compiler output----
-enter the radius
-6
-enter the length
-4
-enter the breadth
-2
-enter the base
-5
-enter the height
-6
-area of the shape is: 113.10
-area of the shape is: 8.00
-area of the shape is: 15.00
-============================================
     
+}
+----compiler output----
+what shape do you want to find area
+circle
+enter the radius
+5
+Area of the Circle is: 78.54
+wanna find again if yes ----type 'yes'
+yes
+what shape do you want to find area
+rectangle
+enter the length
+5
+enter the breadth
+3
+Area of the Rectangle is: 15.00
+wanna find again if yes ----type 'yes'
+no
+thanks for using
+====================================
     
