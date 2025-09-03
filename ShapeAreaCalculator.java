@@ -37,7 +37,7 @@ class ShapeAreaCalculator{
         else{
             System.out.println("enter valid shape");
         }
-        System.out.println("wanna find again if yes ----type 'yes'");
+        System.out.println("wanna find other if yes ----type 'yes'");
         String opinion =scan.next().toLowerCase();
         if(opinion.equals("yes")){
             useagain=true;
